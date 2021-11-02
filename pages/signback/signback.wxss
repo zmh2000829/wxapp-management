@@ -1,0 +1,143 @@
+@import "../../zmhui/main.wxss";
+page {
+    position: relative;
+    height: 100%;
+}
+radio {
+    transform:scale(0.70);
+}
+radio .wx-radio-input{
+    border-color: #0651a5;
+}
+radio .wx-radio-input.wx-radio-input-checked {
+    background: white !important;
+    border: 1rpx solid #0651a5 !important;
+}
+radio .wx-radio-input.wx-radio-input-checked::before {
+    background: #0651a5 !important;
+    color: #0651a5;
+    border-radius: 50%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.header {
+    margin-top: 20rpx;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.header-title {
+    position: relative;
+    text-align: center;
+    width: 50%;
+}
+.header-line {
+    margin-top: 10rpx;
+    position: relative;
+    width: 90%;
+    left: 5%;
+    height: 7rpx;
+    background-color: #0651a5;
+}
+.content {
+    margin-top: 5rpx;
+    font-size: 24rpx;
+    position: relative;
+    width: 100%;
+    background-color: white;
+}
+.content-title {
+    position: relative;
+    width: 100%;
+    background-color: #E8E8E8;
+    display: flex;
+    align-items: center;
+}
+.content-title-bg {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    background-color: white;
+    line-height: 60rpx;
+}
+.form-img {
+    position: relative;
+    width: 40rpx;
+    height: 40rpx;
+    margin-left: 20rpx;
+    margin-right: 10rpx;
+}
+.content-form {
+    position: relative;
+    width: 100%;
+}
+.content-form-title {
+    position: relative;
+    line-height: 50rpx;
+    background-color: #E9F2F7;
+    padding: 10rpx 30rpx;
+    color: #ABB1B5;
+}
+.content-form-upload {
+    position: relative;
+    margin: 20rpx 0rpx;
+    color: #3B3D3E;
+}
+.content-form-title-star {
+    color: red;
+    margin-left: 10rpx;
+}
+.content-form-line {
+    position: relative;
+    margin: 10rpx 15rpx;
+    padding: 8rpx 30rpx;
+    color: #3B3D3E;
+}
+.content-form-line-cal {
+    position: relative;
+    margin: 10rpx 0rpx;
+    padding: 8rpx 10rpx;
+    color: #3B3D3E;
+}
+.content-form-line-textarea {
+    position: relative;
+    height: 90rpx;
+    line-height: 40rpx;
+}
+.content-form-line-radio:before {
+    border: 1px solid #7d7d7d
+}
+.bd {
+    position: relative;
+    border: 1rpx solid #D5D5D5;
+    border-radius: 10rpx;
+}
+.cn {
+    text-align: center;
+}
+.footer {
+    position: relative;
+    width: 100%;
+}
+.footer-line {
+    position: relative;
+    width: 100%;
+    background-color: #E8E8E8;
+    height: 20rpx;
+}
+
+
+
+
+
+
+
+
+
+

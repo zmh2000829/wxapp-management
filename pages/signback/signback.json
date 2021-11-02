@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "学生返校确认",
+  "usingComponents": {
+    "loading": "../loading/loading"
+  }
+}

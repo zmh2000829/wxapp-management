@@ -1,0 +1,111 @@
+<view class="container">
+    <loading wx-if="{{loading}}" />
+
+    <view class="header">
+        <view class="header-title" bindtap="toSign">
+            <text>申请表单</text>
+            <view class="header-line" wx-if="{{operation}}"></view>
+        </view>
+        <view class="header-title" bindtap="toFlow">
+            <text>办事流程</text>
+            <view class="header-line" wx-if="{{!operation}}"></view>
+        </view>
+    </view>
+
+    <view class="content" wx-if="{{operation}}">
+        <view class="content-title">
+            <view class="content-title-bg">
+                <image class="form-img" src="/image/form.png"></image>
+                <text>学生返校确认</text>
+            </view>
+        </view>
+        <view class="content-form" wx-if="{{!loading}}">
+            <view class="content-form-title">当前时间</view>
+            <view class="content-form-line">
+                <input class="content-form-line-input" value="{{date}}"></input>
+            </view>
+            
+            <view class="content-form-title">姓名
+                <text class="content-form-title-star">*</text>
+            </view>
+            <view class="content-form-line bd">
+                <input class="content-form-line-input cn" value="{{username}}"></input>
+            </view>
+
+            <view class="content-form-title">学号
+                <text class="content-form-title-star">*</text>
+            </view>
+            <view class="content-form-line bd">
+                <input class="content-form-line-input cn" value="{{stuid}}"></input>
+            </view>
+
+            <view class="content-form-title">单位</view>
+            <view class="content-form-line bd">
+                <input class="content-form-line-input cn" value="{{usermajor}}"></input>
+            </view>
+
+            <view class="content-form-title">手机号码
+                <text class="content-form-title-star">*</text>
+            </view>
+            <view class="content-form-line bd">
+                <textarea class='content-form-line-textarea' value="{{phone}}" bindblur="bindPhone"></textarea>
+            </view>
+
+            <view class="content-form-title">拟返校时间
+                <text class="content-form-title-star">*</text>
+            </view>
+            <view class="content-form-line-cal">
+                <picker mode="date" bindchange="bindRetDate" value="{{retDate}}" start="{{date}}" end="{{limitDate}}">
+                    <view style="display:flex;align-items:center">
+                    <image class="form-img" src="/image/cal.png"></image>
+                    <text class="picker">　{{retDate}}</text>
+                </view>
+                </picker>
+            </view>
+
+            <view class="content-form-title" style="line-height:40rpx">上传健康码、大数据行程卡、疫苗接种记录（或不适合接种证明）和核酸检测报告（如有需要）
+                <text class="content-form-title-star">*</text>
+            </view>
+            <view class="content-form-upload">
+                <view class="cu-form-group">
+                    <view class="grid col-4 grid-square flex-sub">
+                        <view class="bg-img" wx:for="{{imgList}}" wx:key="index" bindtap="ViewImage" data-url="{{imgList[index]}}">
+                            <image src='{{imgList[index]}}' mode='aspectFill'></image>
+                            <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+                                <text class="cuIcon-close"></text>
+                            </view>
+                        </view>
+                        <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<imgMaxNumber}}">
+                            <text class="cuIcon-cameraadd"></text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+            <view class="content-form-title">是否有任何与疫情相关的，值得注意的情况
+                <text class="content-form-title-star">*</text>
+            </view>
+            <view class="content-form-line bd">
+                <textarea class='content-form-line-textarea' value="无" bindblur="bindMoreInfo"></textarea>
+            </view>
+
+
+            <view class="content-form-title">是否有任何与疫情相关的，值得注意的情况
+                <text class="content-form-title-star">*</text>
+            </view>
+            <view class="content-form-line">
+                <radio-group>
+                    <radio checked="{{commitmentRadio}}" bindtap='commitmentRadioListen'></radio>
+                    <text>本人自愿申请返校，并承诺以上填报信息属实，返校后，保证严格遵守学校管理等各项管理规定。</text>
+                </radio-group>
+            </view>
+        </view>
+    </view>
+
+    <view class="footer">
+        <view class="footer-line"></view>
+    </view>
+    <view wx-if="{{!operation}}">
+        
+    </view>
+</view>
