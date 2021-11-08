@@ -100,17 +100,19 @@
                 </radio-group>
             </view>
         </view>
-    </view>
+        
+        <view class="footer">
+            <view class="footer-line"></view>
+        </view>
 
-    <view class="footer">
-        <view class="footer-line"></view>
-    </view>
-
-    <view class="fixed-submit">
-        <view class="fixed-submit-btn">
-            正式提交
+        <view class="fixed-submit">
+            <view class="fixed-submit-btn">
+                正式提交
+            </view>
         </view>
     </view>
+
+    
     <view wx-if="{{!operation}}">
         
     </view>
