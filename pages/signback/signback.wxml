@@ -100,7 +100,7 @@
                 </radio-group>
             </view>
         </view>
-        
+
         <view class="footer">
             <view class="footer-line"></view>
         </view>
@@ -113,7 +113,45 @@
     </view>
 
     
-    <view wx-if="{{!operation}}">
-        
+    <view class="flow-content" wx-if="{{!operation}}">
+        <view class="flow-content-chart {{status == 1 ? 'blink' : ''}}">
+            <view class="flow-content-chart-text">提交返校申请</view>
+        </view>
+        <view class="flow-content-arrow">
+            ↓ 
+        </view>
+        <view class="flow-content-chart {{status == 2 ? 'blink' : ''}}">
+            <view class="flow-content-chart-text">辅导员审核</view>
+        </view>
+        <view class="flow-content-arrow">
+            ↓ 
+        </view>
+        <view class="flow-content-chart {{status == 3 ? 'blink' : ''}}">
+            <view class="flow-content-chart-text">负责人审核</view>
+        </view>
+        <view class="flow-content-arrow">
+            ↓ 
+        </view>
+        <view class="flow-content-chart">
+            <view class="flow-content-chart-text">审核流程结束</view>
+        </view>
+        <view class="flow-content-arrow">
+            ↓ 　 　↓
+        </view>
+        <view class="flow-content-chart-result">
+            <view class="flow-content-chart-result-bg {{status == 4 ? 'pass-bg' : ''}}">
+                <view class="flow-content-chart-result-text">审核通过</view>
+            </view>
+            <view>　　</view>
+            <view class="flow-content-chart-result-bg {{status == 5 ? 'fail-bg' : ''}}">
+                <view class="flow-content-chart-result-text">审核未通过</view>
+            </view>
+        </view>
+        <view class="tips">若审核未通过请重新提交返校申请</view>
     </view>
+
+
+
+
+
 </view>

@@ -9,13 +9,14 @@ Page({
         date: '',
         limitDate: '',
         retDate: '',
-        operation: true,
+        operation: false,
         imgMaxNumber: 4,
         username: app.globalData.username,
         usermajor: app.globalData.usermajor,
         stuid: app.globalData.stuid,
         phone: '19921940776',
-        commitmentRadio: false
+        commitmentRadio: false,
+        status: 1
     },
     onLoad(){
         this.getDate()
@@ -27,7 +28,7 @@ Page({
           that.setData({
             loading: false
           });
-        }, 1500);
+        }, 500);
     },
     toSign: function() {
         this.setData({

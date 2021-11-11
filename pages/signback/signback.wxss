@@ -151,8 +151,84 @@ radio .wx-radio-input.wx-radio-input-checked::before {
     border-radius: 30rpx;
     color: white;
 }
-
-
+.flow-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50rpx;
+}
+.flow-content-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40%;
+    border-radius: 30rpx;
+    height: 80rpx;
+    background-color: blue;
+}
+.flow-content-chart-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 70%;
+}
+.flow-content-chart-result-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40%;
+    border-radius: 30rpx;
+    height: 80rpx;
+    background-color: blue;
+}
+.flow-content-chart-result-text {
+    position: relative;
+    text-align: center;
+    color: #f2f2f2;
+}
+.flow-content-arrow {
+    text-align: center;
+    position: relative;
+    width: 50%;
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 50rpx;
+}
+.flow-content-chart-text {
+    position: relative;
+    text-align: center;
+    color: #f2f2f2;
+}
+.tips {
+    margin-top: 30rpx;
+    position: relative;
+    font-size: 24rpx;
+}
+.blink {
+    animation:aBlink 800ms infinite;
+    -webkit-animation:aBlink 800ms infinite;
+}
+@keyframes aBlink {
+    from { background-color: blue; }
+    50%{background-color:#1A98FF;}
+    to { background-color: blue; }
+}
+@-webkit-keyframes aBlink {
+    from { background-color: blue; }
+    50%{background-color:#f00;}
+    to { background-color: blue; }
+}
+.pass-bg {
+    background-color: green !important;
+}
+.fail-bg {
+    background-color: #D40602 !important;
+}
 
 
 
